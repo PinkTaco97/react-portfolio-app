@@ -13,9 +13,10 @@ export default function DefaultLayout({
         {children}
       </main>
       <footer className="w-full flex items-center justify-center py-3">
-        <div className="flex items-center gap-1 text-current">
-          <span className="text-default-600">Copyright 2025</span>
+        <div className="flex items-center text-current">
+          <span className="text-default-600"> &copy; 2025 &nbsp;</span>
           <p className="text-primary">Nathan Robertson</p>
+          <span className="text-default-600">, All rights reserved.</span>
         </div>
       </footer>
     </div>
