@@ -1,11 +1,15 @@
+// HeroUI.
 import { Link } from "@heroui/link";
-import { Snippet } from "@heroui/snippet";
-import { Code } from "@heroui/code";
 import { button as buttonStyles } from "@heroui/theme";
 
+// Config.
 import { siteConfig } from "@/config/site";
+
+// Components.
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
+
+// Layouts.
 import DefaultLayout from "@/layouts/default";
 
 export default function IndexPage() {
@@ -13,29 +17,31 @@ export default function IndexPage() {
     <DefaultLayout>
       <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
         <div className="inline-block max-w-lg text-center justify-center">
-          <span className={title()}>Make&nbsp;</span>
-          <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
-          <br />
           <span className={title()}>
-            websites regardless of your design experience.
+            Front-end developer building&nbsp;
+            <span className={title({ color: "yellow" })}>fast</span>,&nbsp;
+            <span className={title({ color: "blue" })}>accessible</span>,
+            and&nbsp;
+            <span className={title({ color: "violet" })}>beautiful</span> web
+            experiences.
           </span>
-          <div className={subtitle({ class: "mt-4" })}>
-            Beautiful, fast and modern React UI library.
+          <br />
+          <div className={subtitle({ class: "mt-10" })}>
+            Explore some things I’ve built.
           </div>
         </div>
 
         <div className="flex gap-3">
-          <Link
-            isExternal
+          {/* <Link
             className={buttonStyles({
               color: "primary",
               radius: "full",
               variant: "shadow",
             })}
-            href={siteConfig.links.docs}
+            href={siteConfig.navItems[1].href}
           >
-            Documentation
-          </Link>
+            Projects
+          </Link> */}
           <Link
             isExternal
             className={buttonStyles({ variant: "bordered", radius: "full" })}
@@ -44,15 +50,6 @@ export default function IndexPage() {
             <GithubIcon size={20} />
             GitHub
           </Link>
-        </div>
-
-        <div className="mt-8">
-          <Snippet hideCopyButton hideSymbol variant="bordered">
-            <span>
-              Get started by editing{" "}
-              <Code color="primary">pages/index.tsx</Code>
-            </span>
-          </Snippet>
         </div>
       </section>
     </DefaultLayout>
